@@ -14,11 +14,11 @@ Category.hasMany(Product, {
 })
 // Products belongToMany Tags (through ProductTag)
 Product.belongsToMany(Tag, {
-  throguh: {
+  through: {
     model: ProductTag,
     unique: true
   },
-  as: "product_tag"
+  as: "product_tags"
 })
 // Tags belongToMany Products (through ProductTag)
 Tag.belongsToMany(Product, {
